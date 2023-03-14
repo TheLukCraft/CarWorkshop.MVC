@@ -1,0 +1,22 @@
+﻿@model List<Product>
+@{
+    ViewData["About"] = "About Page";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">O nas</h1>
+    <u>
+        @foreach (var item in Model)
+        {
+            <a>@item.Title | @item.Description</a>
+            foreach (var tag in item.Tags)
+            {
+                <li>
+                    <a>@tag</a>
+                </li>
+            }
+            <br />
+        }
+    </u>
+</div>

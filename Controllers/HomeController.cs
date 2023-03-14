@@ -17,6 +17,25 @@ namespace CarWorkshop.MVC.Controllers
         {
             return View();
         }
+        public IActionResult About()
+        {
+            var product = new List<Product>()
+            {
+                new Product()
+                {
+                    Title = "Diagnostyka",
+                    Description = "Sprawdzimy Twój samochód",
+                    Tags = new List<string>() {"Diagnostyka", "Samochód", "Naprawa"}
+                },
+                new Product()
+                {
+                    Title = "Olej",
+                    Description = "Wymiana oleju.",
+                    Tags = new List<string>() {"Olej", "Wymiana", "Pomoc"}
+                }
+            };
+            return View(product);
+        }
 
         public IActionResult Privacy()
         {
